@@ -63,7 +63,9 @@ The each convolutional layers is activated with RELU layers to introduce nonline
 
 The model contains one mild dropout layer in order to reduce overfitting (model.py lines 50). I experimented with dropout layers in various positions in the network. In each case, the dropout layers reduced both the training and validation accuracy and increased the difference between the training and validation accuracy. In the end, the best results were without including dropout layers. The best solution for reducing overfitting was increasing the volume of training data, particularly in difficult parts of the track. 
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting by randomly separating 20% of the data for validation (code line 56). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting by randomly separating 20% of the data for validation (code line 56). I created a training set with the second course, but found that it was not necessary for driving the first course. The variability of the second course increased the validation error rate significantly and I did not have time to generate enough detailed sets for the second course. Despite the validation accuracy, this model was also able to drive the first course and the model can be found in model-1.h5.
+
+The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
